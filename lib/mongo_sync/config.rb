@@ -1,9 +1,7 @@
 module MongoSync
 	module Configuration
-		@config = {}
-
 		def self.parse(config_file)
-			config_file ||= Rails.root if defined? Rails
+			config_file ||= File.join(Rails.root, 'config', 'mongo_sync.yml') if defined? Rails
 
 			if config_file
 				begin
@@ -16,7 +14,6 @@ module MongoSync
 			end
 		end
 
-		class FileNotFound < StandardError
-		end
+		class FileNotFound < StandardError; end
 	end
 end
