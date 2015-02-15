@@ -1,6 +1,7 @@
-# Mongo::Sync
+mongo-sync
+==========
 
-TODO: Write a gem description
+> Sync Remote and Local MongoDB Databases in Ruby!
 
 ## Installation
 
