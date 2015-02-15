@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = MongoSync::VERSION
   spec.author        = 'Sheharyar Naseer'
   spec.email         = 'hello@sheharyar.me'
-  spec.homepage      = 'https://sheharyar.me/'
+  spec.homepage      = 'https://github.com/sheharyarn/mongo-sync-ruby'
   spec.license       = 'MIT'
   spec.summary       = 'A Ruby Gem for syncing local and remote Mongo Databases'
 
