@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'mongo-sync/version'
+require 'mongo_sync/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'mongo-sync'
+  spec.name          = 'mongo_sync'
   spec.version       = MongoSync::VERSION
   spec.authors       = ['Sheharyar Naseer']
   spec.email         = ['hello@sheharyar.me']
