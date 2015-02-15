@@ -1,6 +1,6 @@
 require 'mongo_sync/version'
 require 'mongo_sync/config'
-require 'mongo_sync/rails/railtie' if defined? Rails
+require 'mongo_sync/railtie' if defined? Rails
 
 module MongoSync
     def self.pull(config = nil)
