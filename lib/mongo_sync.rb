@@ -66,13 +66,12 @@ module MongoSync
     def self.clean_up(dir)
         puts        "Cleaning Up..."
         system_run  "rm -rf #{dir}"
-        success_msg
     end
 
     def self.system_run(command)
-        raise SystemCommandFailed.new("System Command '#{command}' Failed") if not system(command)
+        raise SystemCommandFailure.new("\n'#{command.strip.gsub(/\s+/, ' ')}' \n") if not system(command)
         success_msg
     end
 
-    class SystemCommandFailed < StandardError; end
+    class SystemCommandFailure < StandardError; end
 end
