@@ -6,12 +6,11 @@ require 'mongo_sync/version'
 Gem::Specification.new do |spec|
   spec.name          = 'mongo_sync'
   spec.version       = MongoSync::VERSION
-  spec.authors       = ['Sheharyar Naseer']
-  spec.email         = ['hello@sheharyar.me']
-  spec.homepage      = 'https://sheharyar.me'
+  spec.author        = 'Sheharyar Naseer'
+  spec.email         = 'hello@sheharyar.me'
+  spec.homepage      = 'https://sheharyar.me/'
   spec.license       = 'MIT'
   spec.summary       = 'A Ruby Gem for syncing local and remote Mongo Databases'
-  # spec.description   = %q{TODO: Write a longer description. Optional.}
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
