@@ -1,5 +1,3 @@
-module Mongo
-  module Sync
-    VERSION = "0.0.1"
-  end
+module MongoSync
+	VERSION = "0.1.0"
 end

@@ -1,7 +1,5 @@
-require "mongo/sync/version"
+require "mongo-sync/version"
 
-module Mongo
-  module Sync
+module MongoSync
     # Your code goes here...
-  end
 end
