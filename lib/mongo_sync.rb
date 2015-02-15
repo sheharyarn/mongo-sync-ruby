@@ -1,5 +1,3 @@
-require 'yaml'
-
 require 'mongo_sync/version'
 require 'mongo_sync/config'
 

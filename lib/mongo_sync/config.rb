@@ -1,3 +1,5 @@
+require 'yaml'
+
 module MongoSync
 	module Configuration
 		def self.parse(config_file)
