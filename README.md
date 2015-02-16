@@ -5,6 +5,7 @@ MongoSync
 
 Based on my [mongo-sync](https://github.com/sheharyarn/mongo-sync) shell script.
 
+![MongoSync Ruby Gem Demo GIF](http://i.imgur.com/jvIUfJf.gif)
 
 ## Installation
 
