@@ -1,14 +1,14 @@
 namespace :mongosync do
 
     desc "Push DB to Remote from Local"
-    task :push => :environment, :config do |t, args|
+    task :push, [:config] => :environment do |t, args|
         if user_accepts("This will overwrite your remote database.")       
             MongoSync.push args[:config]
         end
     end
 
     desc "Pull DB to Local from Remote"
-    task :pull => :environment, :config do |t, args|
+    task :pull, [:config] => :environment do |t, args|
         if user_accepts("This will overwrite your local database.")
             MongoSync.pull args[:config]
         end
