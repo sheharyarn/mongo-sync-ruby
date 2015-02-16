@@ -67,6 +67,36 @@ rake mongo_sync:push       # Push DB to Remote
 rake mongo_sync:pull       # Pull DB to Local
 ```
 
+### Non-Rails
+
+1. Create a `mongo_sync.yml` in your project.
+2. In your project, add this:
+
+    ```ruby
+    require 'rake'
+    require 'mongo_sync'
+    load 'tasks/mongo_sync.rake'
+    ```
+
+3. Pass the path of your config file in the tasks:
+
+    ```sh
+    rake mongo_sync:push['path/to/mongo_sync.yml']
+    ```
+
+### Console / Command-line
+
+```ruby
+require 'mongo_sync'
+
+# Looks for config/mongo_sync.yml - Rails only
+MongoSync.pull
+
+# You can pass path of your config file as well
+MongoSync.push "path/to/mongo_sync.yml"
+```
+
+
 ## Notes 
 
  - Pushing/Pulling overwrites the Target DB
