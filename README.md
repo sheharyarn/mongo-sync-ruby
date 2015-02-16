@@ -1,5 +1,5 @@
-mongo_sync
-==========
+MongoSync
+=========
 
 > Sync Remote and Local MongoDB Databases in Ruby! Works with MongoHQ/Compose, MongoLab and other Heroku-hosted MongoDBs too!
 
@@ -31,7 +31,43 @@ $ gem install mongo_sync
 
 ## Usage
 
-TODO: Write usage instructions here
+### Rails
+
+In Rails, run this generator to set up a `mongo_sync.yml` configuration template:
+
+```bash
+rails g mongo_sync:config
+```
+
+Now edit the newly created `config/mongo_sync.yml`, putting in details of your remote and local DBs:
+
+```yaml
+local:
+  db: 'local_db_name'
+
+remote:
+  db: 'remote_db_name'
+  host:
+    url: 'some.remoteurl.com'
+    port: 27017
+  access:
+    username: 'remote_mongo_user'
+    password: 'remote_mongo_pass'
+
+# For Heroku MongoDB URLs, here's the legend:
+# mongodb://username:password@hosturl.com:port/db_name
+
+# All fields are required
+```
+
+Now, to start syncing, use these rake tasks:
+
+```sh
+rake mongo_sync:push       # Push DB to Remote
+rake mongo_sync:pull       # Pull DB to Local
+```
+
+**Note:** *It's a good idea to keep your `mongo_sync.yml` in `.gitignore` or load the values from the `ENV`*.
 
 
 ## Contributing
