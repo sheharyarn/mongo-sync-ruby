@@ -106,7 +106,7 @@ MongoSync.push "path/to/mongo_sync.yml"
 ## TODO
 
  - Add more options and ways to enter DB details in `mongo_sync.yml`
- - Add a backup command/task
+ - Add a `backup` command/task and an `auto-backup` feature
  - Write Tests
  - Add a `no-overwrite` feature, so that it doesn't drop the target DB before restoring it, and _actually_ tries to sync it
 

@@ -1,4 +1,4 @@
-namespace :mongosync do
+namespace :mongo_sync do
 
     desc "Push DB to Remote from Local"
     task :push, [:config] => :environment do |t, args|
