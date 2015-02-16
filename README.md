@@ -100,7 +100,9 @@ MongoSync.push "path/to/mongo_sync.yml"
 
 ## Notes 
 
- - Pushing/Pulling overwrites the Target DB
+ - MongoSync requires `mongodump` and `mongorestore` binaries to be installed in your system. If you have [`mongodb`](http://docs.mongodb.org/manual/tutorial/#getting-started) installed, then you probably already have them
+ - Pushing/Pulling ***overwrites*** the Target DB
+ - You ***HAVE*** to pass the path of your `mongo_sync.yml` config file in Non-Rails Projects
  - It's a good idea to keep your `mongo_sync.yml` in `.gitignore` or load the values from the `ENV`
 
 
