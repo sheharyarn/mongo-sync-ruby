@@ -67,7 +67,18 @@ rake mongo_sync:push       # Push DB to Remote
 rake mongo_sync:pull       # Pull DB to Local
 ```
 
-**Note:** *It's a good idea to keep your `mongo_sync.yml` in `.gitignore` or load the values from the `ENV`*.
+## Notes 
+
+ - Pushing/Pulling overwrites the Target DB
+ - It's a good idea to keep your `mongo_sync.yml` in `.gitignore` or load the values from the `ENV`
+
+
+## TODO
+
+ - Add more options and ways to enter DB details in `mongo_sync.yml`
+ - Add a backup command/task
+ - Write Tests
+ - Add a `no-overwrite` feature, so that it doesn't drop the target DB before restoring it, and _actually_ tries to sync it
 
 
 ## Contributing
