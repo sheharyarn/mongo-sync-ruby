@@ -40,7 +40,7 @@ module MongoSync
                         -d #{configs['remote']['db']} \
                         -u #{configs['remote']['access']['username']} \
                         -p #{configs['remote']['access']['password']} \
-                        #{tmpdir}/#{configs['remote']['db']} \
+                        #{tmpdir}/#{configs['local']['db']} \
                         --drop > /dev/null"
 
         clean_up(tmpdir)
